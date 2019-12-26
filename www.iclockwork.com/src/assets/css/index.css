@@ -1,0 +1,392 @@
+@charset "UTF-8";
+
+/* 基础的css */
+
+html,
+body,
+div,
+span,
+p,
+img,
+ul,
+ol,
+li,
+dd,
+dt,
+dl,
+input,
+button,
+form,
+textarea,
+select,
+option,
+table,
+tr,
+th,
+td,
+header,
+footer,
+section,
+aside {
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+article,
+aside,
+blockquote,
+body,
+button,
+code,
+dd,
+details,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+input,
+legend,
+li,
+menu,
+nav,
+ol,
+p,
+pre,
+section,
+td,
+textarea,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+b,
+cite,
+code,
+em,
+i,
+small,
+th {
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* 媒体查询 */
+@media only screen and (max-width: 576px){html{font-size: 30px;}}
+@media only screen and (min-width: 577px) and (max-width: 672px){html{font-size: 35px;}}
+@media only screen and (min-width: 673px) and (max-width: 768px){html{font-size: 40px;}}
+@media only screen and (min-width: 769px) and (max-width: 864px){html{font-size: 45px;}}
+@media only screen and (min-width: 865px) and (max-width: 960px){html{font-size: 50px;}}
+@media only screen and (min-width: 961px) and (max-width: 1056px){html{font-size: 55px;}}
+@media only screen and (min-width: 1057px) and (max-width: 1152px){
+  html{font-size: 60px;}
+}
+@media only screen and (min-width: 1153px) and (max-width: 1248px){html{font-size: 65px;}
+ 
+}
+@media only screen and (min-width: 1249px) and (max-width: 1344px){html{font-size: 70px;}}
+@media only screen and (min-width: 1345px) and (max-width: 1440px){html{font-size: 75px;}}
+@media only screen and (min-width: 1441px) and (max-width: 1536px){
+  html{font-size: 80px;}
+}
+@media only screen and (min-width: 1537px) and (max-width: 1632px){
+  html{font-size: 85px;}
+}
+@media only screen and (min-width: 1633px) and (max-width: 1728px){
+  html{font-size: 90px;}
+}
+@media only screen and (min-width: 1729px) and (max-width: 1824px){
+  html{font-size: 95px;}
+}
+@media only screen and (min-width: 1825px) and (max-width: 1920px){
+    html{font-size: 100px;} 
+  
+} 
+@media only screen and (min-width: 1920px){
+  html{font-size: 100px;}
+}
+
+
+
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  min-width: 1200px;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  margin: 0
+}
+
+
+input {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+a:active,
+a:hover,
+a:link,
+a:visited {
+  outline: 0;
+}
+
+
+/* 布局 */
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+
+/* 清除浮动 */
+
+.clear {
+  clear: both;
+}
+
+.clearfix {
+  /* 触发 ie的元素的hasLayout属性,是元素拥有布局（尺寸计算和定位） */
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+
+/* 单行文字超出省略 */
+
+.ellipsis-one {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(20%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-20%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeIn {
+    from {
+            opacity: 0;
+        }
+    to {
+            opacity: 1;
+        }
+}
+
+.fadeIn {
+        animation-name: fadeIn;
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%
+}
+
+.top_wrap .topImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  top: 0;
+  left: 0
+}
+
+.top_wrap .topmark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, .5);
+}
+.top_wrap{
+    overflow: hidden;
+    height: 0;
+    padding-bottom:20.8%;
+    position: relative;
+}
+.topImg img{
+  width: 100%;
+  height:100%;
+}
+.total_title{
+    font-size: 24px;
+    color: #f08200;
+    font-weight: bold;
+    cursor: default;
+    margin:46px 0 16px 0;
+}
+.total_title span {
+    font-size: 16px;
+    color: #999;
+    font-weight: normal;
+}
+.all_top{
+  width: 1000px;
+  height: 57px;
+  color:white;
+  float: left;
+  background-color: #FFA842;
+  line-height: 57px;
+  padding-left: 32px;
+  font-size: 22px;
+  margin-bottom: 24px
+}
+.all_left{
+  margin-right: 58px;
+  margin-bottom:60px;
+  float: left;
+  width: 471px;  
+}
+.all_right{
+  float: left;
+  margin-bottom:31px;
+  width: 471px; 
+}
+.all_right p{
+  text-indent: 2em
+}
+.all_left:nth-child(even){
+  margin-right: 0px
+}
+.all_left .core_img{
+  width: 471px;
+  height: 201px;
+}
+.all_left .detail_title{
+  font-size: 20px;
+  color: #333;
+  margin:15px 0 0 0;
+}
+.all_left .detail_{
+    text-indent: 2em;
+    font-size: 16px;
+    color: #333;
+    margin-top: 15px;
+    max-height: 166px
+}
+.office_left{
+  margin-right: 40px;
+  margin-bottom:31px;
+  float: left;
+  width: 471px;
+}
+.all_row{
+  margin:0px 0 31px 0;
+  font-size: 16px;
+  color: #333;
+  text-indent: 2em;
+  float: left;
+  line-height: 32px
+}
+.all_left .office_img{
+  width: 470px;
+  height: 311px
+}
+#map img{
+  max-width: inherit !important;
+}
+.swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        border-radius: 20px;
+        background: #FFF;
+        opacity: .35;
+        filter: alpha(opacity=35);
+        -webkit-transition: width .4s ease-in;
+    }
+.swiper-pagination-bullet-active{
+width: 45px;
+    background: #FFF;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    }
