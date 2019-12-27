@@ -325,7 +325,7 @@ export default {
   .company_line {
     position: absolute;
     left: 50%;
-    margin-left: -8.65rem;
+    margin-left: -9.5rem;
     top: 15rem;
     width: 17.28rem;
     height: 0.89rem;
@@ -339,7 +339,7 @@ export default {
     height: 5.4rem;
     top: 13rem;
     left: 50%;
-    margin-left: -8rem;
+    margin-left: -8.85rem;
     color: white;
     font-size: 0.16rem;
     .xxzg {

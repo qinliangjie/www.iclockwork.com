@@ -38,7 +38,7 @@ var router = new Router({
     },{
       path:'/contactUs',
       name:'聯係我們',
-      component:recruitment
+      component:contactUs
     }
   ]
   
